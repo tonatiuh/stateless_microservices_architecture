@@ -1,0 +1,11 @@
+{
+  "engines": {
+    "http": {
+      "port": 3000
+    }
+  },
+
+  "services": {
+    "wss": "http://localhost:3001"
+  }
+}

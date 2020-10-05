@@ -1,4 +1,5 @@
 window.onload = function() {
+  // NOTE: `io` comes from the `socket.io` package
   let socket   = io(wss);
   let $chatbox = document.querySelector('#chatbox');
 

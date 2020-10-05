@@ -8,10 +8,6 @@ module.exports.init = function() {
   this.sub.on('message', onMessage.bind(this));
 };
 
-module.exports.send = function(data) {
-  this.pub.publish('events', encode(data));
-};
-
 function onMessage(channel, message) {
   if (channel !== 'events') { return false };
   try {

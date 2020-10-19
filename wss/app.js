@@ -2,7 +2,8 @@
 try {
   require('./libs/config').init();
   require('./engines/server').init();
-  require('./engines/redis').init();
+  // require('./engines/redis').init();
+  require('./engines/kafka').init();
   require('./managers/wsPool').init();
 
   require('./routes');

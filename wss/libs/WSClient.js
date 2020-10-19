@@ -1,4 +1,4 @@
-const EventBus = require('../engines/redis');
+const EventBus = require('../engines/kafka');
 
 module.exports = class WSClient {
   constructor(socket) {
@@ -11,7 +11,7 @@ module.exports = class WSClient {
    * payload  : {}
    * */
   onEvent(event) {
-    EventBus.send({
+    EventBus.produce({
       metadata : { socketId : this.socket.id },
       payload  : event
     });
